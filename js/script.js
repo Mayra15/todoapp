@@ -1,5 +1,5 @@
 var addButton = document.querySelector('#add-task');
-var list =
+var list;
 
 addButton.addEventListener('click',addItem);
 

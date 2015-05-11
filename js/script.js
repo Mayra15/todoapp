@@ -45,22 +45,21 @@ function delListItem (){
 }
 
 // for the user to be able to edit their list
-function editToDo(){
-    var editButton = document.querySelectorAll('.edit');
-    for ( var i = 0; i < editButtons.length; i++ ){
-        var editButton = editButtons [i];
-        editButton.addeventListener('click', editLi);
+function editToDo() {
+    var editText = document.getElementId('userInput').value;
+    for(var i = 0; i< editButtons.length; i++){
+        var editButton = editButtons[i];
+        editButton.addEventListener('click', editLi);
     }
+
 }
 
-// edit function
+//edit function
 
 function editLi(){
-
-    this.parentNode.innerHTML = '<input type="edit"/>' + userInput;
+    this.parentNode.innerHTML='<input type = "edit'> + userInput;
 }
 
-//to mark the list item as done
 
 
 

@@ -12,7 +12,7 @@ function addItem() {
 
     //We have the user input and we're creating a list item.
     var listItem = document.createElement('li');
-    listItem.classList.add('collection-item')
+    listItem.classList.add('collection-item');
     //giving the list item the content from the user (userInput)
     var idNumber = list.length;
     var liHTML = [  '<input type="checkbox" class="complete" id="checkbox'+idNumber+'" /> <label for="checkbox'+idNumber+'"> </label> <span>'+ userInput+'</span> ',
@@ -44,12 +44,14 @@ function delListItem (){
     this.parentNode.outerHTML = '';
 }
 
-// for the user to be able to edit their li
-function editToDo (){
+// for the user to be able to edit their list
+function editToDo(){
     var editButton = document.querySelectorAll('.edit');
-    for (var i = 0; i < editButtons.length; i++){
-        var editButton = editButtons[i];
-        editButton.addEventListener('click', editLi);
+    for ( var i = 0; i < editButtons.length; i++ ){
+        var editButton = editButtons [i];
+        editButton.addeventListener('click', editLi);
+    }
+}
 
 // edit function
 
@@ -59,11 +61,6 @@ function editLi(){
 }
 
 //to mark the list item as done
-
-function doneLi () {
-
-}
-
 
 
 
